@@ -10,6 +10,7 @@
 // @run-at       document-end
 // @grant        none
 // @require      https://printjs-4de6.kxcdn.com/print.min.js
+// @license MIT
 // ==/UserScript==
 
 (function () {
@@ -91,29 +92,31 @@
     }
   };
 
-  const btnGroup = document.querySelector('.control.svelte-120uqgv');
-  const originPlayBtn = document.querySelector(".svelte-tacrym.accent");
+  window.onload = () => {
+    const btnGroup = document.querySelector('.control');
+    const originPlayBtn = document.querySelector(".accent");
 
-  // Handling function for clicking the play button
-  const handlePlayBtnClick = () => {
-    originPlayBtn.click();
+    // Handling function for clicking the play button
+    const handlePlayBtnClick = () => {
+      originPlayBtn.click();
 
-    setTimeout(() => {
-      clearAllTimer();
-    }, 3000);
-  };
+      setTimeout(() => {
+        clearAllTimer();
+      }, 3000);
+    };
 
-  // Create a print button
-  const newPrintBtn = document.createElement("div");
-  newPrintBtn.className = "button-container svelte-120uqgv";
-  newPrintBtn.innerHTML = `<button size='big' theme='white' type='button' class='svelte-14csrjh block'>🖨️ &nbsp; Print</button>`;
-  btnGroup.append(newPrintBtn);
-  newPrintBtn.onclick = handlePrintBtnClick;
+    // Create a print button
+    const newPrintBtn = document.createElement("div");
+    newPrintBtn.className = "button-container svelte-120uqgv";
+    newPrintBtn.innerHTML = `<button size='big' theme='white' type='button' class='svelte-14csrjh block'>🖨️ &nbsp; Print</button>`;
+    btnGroup.append(newPrintBtn);
+    newPrintBtn.onclick = handlePrintBtnClick;
 
-  // Create play button
-  const newPlayBtn = document.createElement("div");
-  newPlayBtn.className = "button-container svelte-120uqgv";
-  newPlayBtn.innerHTML = `<button size='big' theme='white' type='button' class='svelte-14csrjh block'>🎵 &nbsp; Play</button>`;
-  btnGroup.append(newPlayBtn);
-  newPlayBtn.onclick = handlePlayBtnClick;
+    // Create play button
+    const newPlayBtn = document.createElement("div");
+    newPlayBtn.className = "button-container svelte-120uqgv";
+    newPlayBtn.innerHTML = `<button size='big' theme='white' type='button' class='svelte-14csrjh block'>🎵 &nbsp; Play</button>`;
+    btnGroup.append(newPlayBtn);
+    newPlayBtn.onclick = handlePlayBtnClick;
+  }
 })();
