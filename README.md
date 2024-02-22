@@ -13,7 +13,6 @@
     <a href="https://github.com/Chenmo1212/Yopu-Helper/pulls" target="_blank">
         <img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/Chenmo1212/Yopu-Helper" />
     </a>
-    <a href="/"><img src="https://vbr.wocr.tk/badge?page_id=Chenmo1212/Yopu-Helper.visitors&left_color=green&right_color=red" alt="Visitor" /></a>
     <a href="https://github.com/Chenmo1212/Yopu-Helper" target="_blank">
         <img alt="GitHub" src="https://img.shields.io/github/license/Chenmo1212/Yopu-Helper">
     </a>
